@@ -4,7 +4,8 @@ This repository contains resources for the business engineering process automati
 
 ## Repository layout
 
-The folder `examples` contains the projects and source code shown during the lecture.
+The folder `examples` contains the projects and source code shown during the lecture. 
+The examples are a git submodule for the repository https://github.com/patst/process-examples.git
 
 The folder `exercises` contains the project templates for the exercises.
 
