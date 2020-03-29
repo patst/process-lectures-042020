@@ -37,3 +37,16 @@ All examples are Spring-Boot applications.
 They can be run using `./mvnw spring-boot:run`.
 
 The cockpit is then accessible at http://localhost:8080 (Username: admin/ Password: admin)
+
+## Additional resources and links
+
+The following list of links may come handy for learning how to implement processes with spring-boot and Camunda bpm:
+
+| Description   | Link          |
+|:---           |:---           |
+| Camunda modeler is used for creating executable BPMN models. The modeler can be used for modelling only as well | https://camunda.com/download/modeler/ |
+| BPMN Reference chart with an overview of all common BPMN symbols | http://www.bpmb.de/images/BPMN2_0_Poster_EN.pdf |
+| Short description of the common BPMN symbols | https://camunda.com/bpmn/reference/ | 
+| The official documentation for Camunda BPM. Useful for looking up implementation details.                  | https://docs.camunda.org/manual/7.12/  |
+| Collection of 'official' Camunda BPM Examples | https://github.com/camunda/camunda-bpm-examples |
+| Implementation of Java Delegates | https://docs.camunda.org/manual/latest/user-guide/process-engine/delegation-code/ |
