@@ -6,7 +6,7 @@ The test class `de.patst.process.testing.AdditionProcessTest` contains the test 
 
 ## Implementation
 
-Create a class `de.patst.process.delegate.AdditionDelegate` under `src/main/resources` which implements the `JavaDelegate` interface and
+Create a class `de.patst.process.delegate.AdditionDelegate` under `src/main/java` which implements the `JavaDelegate` interface and
 implements the required method.
 
 The `AdditionDelegate` class must have a `@org.springframework.stereotype.Component` annotation in order to be picked up by the
