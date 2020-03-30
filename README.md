@@ -38,6 +38,9 @@ They can be run using `./mvnw spring-boot:run`.
 
 The cockpit is then accessible at http://localhost:8080 (Username: admin/ Password: admin)
 
+If the application does not start because of a "Port already in use" error you can change the port in the `application.properties` 
+with adding this property: `server.port=8081`
+
 ## Additional resources and links
 
 The following list of links may come handy for learning how to implement processes with spring-boot and Camunda bpm:
