@@ -6,6 +6,8 @@ The test class `de.patst.process.testing.AdditionProcessTest` contains the test 
 
 ## Implementation
 
+### Exercise 1
+
 Create a class `de.patst.process.delegate.AdditionDelegate` under `src/main/java` which implements the `JavaDelegate` interface and
 implements the required method.
 
@@ -17,3 +19,10 @@ and is expected to write the sum of these two variables into a new variable call
 
 After the implementation is done the `de.patst.process.testing.AdditionProcessTest.testSum()` test case is supposed to be successful.
 In order to execute it remove the @Ignore annotation at the testcase.
+
+### Exercise 2
+
+Add the moment there is only one test case implemented. Create more tests to check the corner cases:
+
+* what happens if no/ or only one summand is specified
+* what happens if a summand has the wrong data type 
