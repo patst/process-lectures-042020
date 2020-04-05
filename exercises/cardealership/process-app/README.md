@@ -17,7 +17,7 @@ This first exercise creates the car dealership process pool (3rd pool from the t
     
 5. Create the java classes described in the class diagram in the package `de.patst.process.model`.
 
-6. Write a JUnit test which tests a successful execution of the process. At the moment the other pools to not exist. 
+6. Write a JUnit test which tests a successful execution of the process. At the moment the other pools do not exist. 
 Therefore we have to send signals and set variables manually in the unit test.
     a. Send the signal events from the test code (Use the RuntimeService) 
     b. Add variables where needed to the process instance (RuntimeService)
@@ -25,4 +25,4 @@ Therefore we have to send signals and set variables manually in the unit test.
 7. There is a form to create a new car contract in the browser at http://localhost:8080/index.html .
 The form does not yet call the process engine to create the process instance. 
 The call needs to be implemented in the Javascript file at `src/main/resources/static/create_contract.js`.
-There are two links. One is the CamundaBPM API description and the other links shows an example how to call a REST API with Javascript.
+There are two links. One is the CamundaBPM API description and the other link shows an example how to call a REST API with Javascript.
