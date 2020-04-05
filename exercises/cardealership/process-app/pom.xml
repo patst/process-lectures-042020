@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>exercise1-cardealership-v1</artifactId>
+    <artifactId>cardealership-process-app</artifactId>
 
     <dependencyManagement>
         <dependencies>
