@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Car dealership website</title>
+</head>
+<body>
+
+<h3>Create new car contract</h3>
+
+<form action="javascript:createContract(
+    formControlSelectCarModel.value,
+    inputCustomerEmail.value,
+    inputStreet.value,
+    inputHouseNumber.value,
+    inputCity.value,
+    inputZip.value)">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="formControlSelectCarModel">Example select</label>
+      <select class="form-control" id="formControlSelectCarModel">
+        <option>VW-Golf</option>
+        <option>VW-Polo</option>
+        <option>VW-Tiguan</option>
+        <option>VW-Tuareg</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCustomerEmail">Email address</label>
+      <input type="email" class="form-control" id="inputCustomerEmail" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputStreet">Address</label>
+      <input type="text" class="form-control" id="inputStreet" placeholder="1234 Main St">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputHouseNumber">House Number</label>
+      <input type="text" class="form-control" id="inputHouseNumber">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit contract</button>
+</form>
+<!-- Toast is shown after a contract was created -->
+<div class="toast" id="contractCreatedToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="10000">
+  <div class="toast-header">
+    <strong class="mr-auto">Contract created</strong>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body" id="contractCreatedToastBody">
+    The contract was created.
+  </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="create_contract.js"></script>
+</body>
+</html>
