@@ -1,0 +1,5 @@
+server:
+  port: 8084
+app:
+  engine:
+    api: http://localhost:8080/rest

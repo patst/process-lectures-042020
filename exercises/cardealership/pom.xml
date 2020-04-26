@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>process-app</module>
+        <module>remote-services</module>
     </modules>
 
     <artifactId>process-cardealership</artifactId>
