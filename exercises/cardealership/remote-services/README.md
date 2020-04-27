@@ -6,7 +6,7 @@ The services are:
 
 **Search for a delivery service**:
 
-Provided at `/delivery-service` and returns a json array with delivery services.
+Provided at `http://localhost:8084/delivery-service` and returns a json array with delivery services.
 
 Example response to a GET request:
 
@@ -37,7 +37,7 @@ Example call:
 /delivery-service/1/order?processInstanceId=45435435-asdfdsf-234234-sdfsd&respondTo=http://localhost:8080/deliveryServiceResponse
 ```
 
-Then after on second a **PUT** request to `http://localhost:8080/deliveryServiceResponse` is executed with this payload:
+Then after on second a **PUT** request to `http://localhost:8084/deliveryServiceResponse` is executed with this payload:
 
 ````json
 {
