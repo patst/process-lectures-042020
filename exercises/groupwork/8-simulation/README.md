@@ -21,4 +21,4 @@ Hints:
 
 * Business engineering script chapter 7.4
 * Normal distribution: https://en.wikipedia.org/wiki/Normal_distribution
-* Exponential distribuation: https://en.wikipedia.org/wiki/Exponential_distribution
+* Exponential distribution: https://en.wikipedia.org/wiki/Exponential_distribution

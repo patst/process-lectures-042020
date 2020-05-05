@@ -4,25 +4,25 @@ import java.io.Serializable;
 
 public class DeliveryResponseDTO implements Serializable {
 
-  private String contractId;
+  private String processInstanceId;
   private String status;
   private Double deliveryPrice;
 
   public DeliveryResponseDTO() {
   }
 
-  public DeliveryResponseDTO(String contractId, String status, Double deliveryPrice) {
-    this.contractId = contractId;
+  public DeliveryResponseDTO(String processInstanceId, String status, Double deliveryPrice) {
+    this.processInstanceId = processInstanceId;
     this.status = status;
     this.deliveryPrice = deliveryPrice;
   }
 
-  public String getContractId() {
-    return contractId;
+  public String getProcessInstanceId() {
+    return processInstanceId;
   }
 
-  public void setContractId(String contractId) {
-    this.contractId = contractId;
+  public void setProcessInstanceId(String processInstanceId) {
+    this.processInstanceId = processInstanceId;
   }
 
   public String getStatus() {
