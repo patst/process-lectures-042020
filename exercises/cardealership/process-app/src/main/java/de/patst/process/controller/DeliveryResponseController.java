@@ -1,6 +1,5 @@
 package de.patst.process.controller;
 
-
 import de.patst.process.model.DeliveryResponseDTO;
 import java.util.Objects;
 import org.camunda.bpm.engine.RuntimeService;
@@ -15,23 +14,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DeliveryResponseController {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(DeliveryResponseController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DeliveryResponseController.class);
 
-  @Autowired
-  private RuntimeService runtimeService;
+    @Autowired
+    private RuntimeService runtimeService;
 
-  @PutMapping("/delivery-response")
-  public void deliveryResponse(@RequestBody DeliveryResponseDTO response) {
-    LOGGER.info("Got response from delivery service: {}", response);
-    // handle response (correlation)
-    MessageCorrelationResult correlationResult = runtimeService
-        .createMessageCorrelation("DeliveryServiceResponseReceivedMessage")
-        .processInstanceId(response.getProcessInstanceId())
-        .setVariable("deliveryResponse", response)
-        .correlateWithResult();
-    Objects.requireNonNull(correlationResult);
+    @PutMapping("/delivery-response")
+    public void deliveryResponse(@RequestBody DeliveryResponseDTO response) {
+        LOGGER.info("Got response from delivery service: {}", response);
+        // handle response (correlation)
+        MessageCorrelationResult correlationResult = runtimeService
+            .createMessageCorrelation("DeliveryServiceResponseReceivedMessage")
+            .processInstanceId(response.getProcessInstanceId())
+            .setVariable("deliveryResponse", response)
+            .correlateWithResult();
+        Objects.requireNonNull(correlationResult);
 
-    LOGGER.info("Correlated message for process instance {}", correlationResult.getExecution().getProcessInstanceId());
-  }
+        LOGGER.info("Correlated message for process instance {}", correlationResult.getExecution().getProcessInstanceId());
+    }
 }
-

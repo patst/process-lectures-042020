@@ -1,0 +1,12 @@
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: admin
+app:
+  self: http://localhost:8080
+  service:
+    search-delivery-services:
+      url: http://localhost:8084/delivery-service
+    assign-delivery:
+      url: http://localhost:8084/delivery-service/{deliveryServiceId}/order?processInstanceId={processInstanceId}&respondTo={respondTo}

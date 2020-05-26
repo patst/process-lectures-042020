@@ -28,12 +28,17 @@ public class SearchDeliveryServiceDelegate implements JavaDelegate {
     LOGGER.info("Searching delivery service for processInstanceId={} with businessKey={}",
         execution.getProcessInstanceId(), execution.getBusinessKey());
 
-    DeliveryServiceDTO[] deliveryServices = restTemplate
-        .getForObject(deliveryServiceUrl, DeliveryServiceDTO[].class);
+    DeliveryServiceDTO[] deliveryServices = restTemplate.getForObject(
+        deliveryServiceUrl,
+        DeliveryServiceDTO[].class);
     Objects.requireNonNull(deliveryServices);
 
+    // here should be some logic to pick a delivery service
+    // Otherwise a user task can be implemented if choosing is not possible automatically
+    // we just use a random delivery service. Its possible we ask a already rejected delivery service again.
     DeliveryServiceDTO deliveryService = deliveryServices[new Random().nextInt(deliveryServices.length)];
     execution.setVariable("deliveryService", deliveryService);
 
+    LOGGER.info("Picked {} as delivery service.", deliveryService.getName());
   }
 }
